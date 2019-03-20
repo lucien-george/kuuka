@@ -115,7 +115,10 @@
 }
 
 .kuuka-mobile {
-  width: 20%;
+  width: 40%;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .move-belongings-banner {
@@ -124,6 +127,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 15%;
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .move-belongings-banner-container {
   width: 55%;
@@ -131,17 +140,21 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media only screen and (max-width: 768px) {
+    width: auto;
+    height: auto;
+  }
 }
 
 .move-belongings-banner-title h1 {
   font-weight: bold;
-  font-size: 47px;
+  // font-size: 47px;
 }
 
 .move-belongings-banner-subtitle {
   p {
     font-weight: lighter;
-    font-size: 20px;
+    // font-size: 20px;
   }
 }
 
@@ -150,7 +163,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 15%;
+  padding: 0 12%;
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+    height: 100vh;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
 }
 .storage-banner-container {
   width: 55%;
@@ -158,23 +177,96 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media only screen and (max-width: 768px) {
+    width: auto;
+    height: auto;
+  }
 }
 
 .storage-banner-title h1 {
   text-align: right;
   font-weight: bold;
-  font-size: 47px;
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+  }
+  // font-size: 47px;
 }
 
 .storage-banner-subtitle {
   p {
     text-align: right;
     font-weight: lighter;
-    font-size: 20px;
+    @media only screen and (max-width: 768px) {
+      text-align: center;
+    }
+    // font-size: 20px;
   }
 }
 
-.garage {
-  width: 35%;
+.storage {
+  width: 45%;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.covered-banner {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12%;
+  @media only screen and (max-width: 768px) {
+    height: auto;
+    text-align: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+
+.covered-banner-container {
+  width: 55%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  @media only screen and (max-width: 768px) {
+    width: auto;
+    height: auto;
+  }
+}
+
+.covered-banner-title h1 {
+  font-weight: bold;
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+  }
+  // font-size: 47px;
+}
+
+.covered-banner-subtitle {
+    font-weight: lighter;
+    @media only screen and (max-width: 768px) {
+      text-align: center;
+    }
+    // font-size: 20px;
+}
+
+.covered-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  p {
+    color: #A8A8A8;
+  }
 }
 
