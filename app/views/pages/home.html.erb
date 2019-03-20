@@ -1,2 +1,34 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home-banner">
+  <div class="home-banner-container">
+    <div class="home-banner-title">
+      <h1>Store your goods with people like you.</h1>
+    </div>
+    <div class="home-banner-subtitle">
+      <p>A mobile app that will help people move only by moving a finger</p>
+    </div>
+    <div class="home-banner-buttons">
+      <%= link_to root_path do %>
+        <div class="home-banner-button" style="background-color: #3C56F1; box-shadow: 0 5px 11px rgba(60,86,241,0.3);">
+          <p>Storage</p>
+          <div>
+            <%= image_tag 'white-circle.png', height: 7, width: 7 %>
+            <%= image_tag 'white-circle.png', height: 7, width: 7 %>
+            <%= image_tag 'white-circle.png', height: 7, width: 7 %>
+            <%= image_tag 'white-circle.png', height: 7, width: 7 %>
+          </div>
+        </div>
+      <% end %>
+      <%= link_to root_path do %>
+        <div class="home-banner-button" style="background-color: #00BDC7; box-shadow: 0 5px 11px rgba(0,189,199,0.3);">
+          <p>List my Space</p>
+          <div>
+            <%= image_tag 'white-triangle.png', height: 7, width: 7 %>
+            <%= image_tag 'white-triangle.png', height: 7, width: 7 %>
+            <%= image_tag 'white-triangle.png', height: 7, width: 7 %>
+            <%= image_tag 'white-triangle.png', height: 7, width: 7 %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
