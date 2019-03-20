@@ -10,3 +10,86 @@
   top: -10%;
   z-index: -1;
 }
+
+.main-screen {
+  width: 100%;
+  height: calc(100vh - 82px);
+  padding-top: 125px;
+  @include flex-column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  color: $white;
+  font-family: $headers-font;
+
+  h1 {
+    font-weight: bold;
+    font-size: 80px;
+  }
+
+  img {
+    margin: 17px 0 0 0;
+  }
+
+  p {
+    font-size: 30px;
+  }
+}
+
+@include for-laptop {
+  .main-screen {
+    padding-top: 100px;
+
+    h1 {
+      font-size: 50px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  .list-your-space-background {
+    top: 0;
+  }
+}
+
+@include for-tablet {
+  .main-screen {
+    padding-top: 75px;
+
+    h1 {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    img {
+      width: 40%;
+    }
+  }
+}
+
+@include for-landscape-phone {
+  .main-screen {
+
+    h1 {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    img {
+      width: 50%;
+      margin-top: 5px;
+    }
+  }
+
+  .list-your-space-background {
+    top: 5%;
+  }
+}
