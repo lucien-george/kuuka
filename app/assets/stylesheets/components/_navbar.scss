@@ -1,7 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 0.5px solid rgba(0,0,0,0.1);
+  padding: 0;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -13,5 +14,17 @@
 }
 
 .nav-link {
-  padding: 20px 30px !important;
+  padding: 20px 0 !important;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.nav-link-border-right {
+  border-right: 0.5px solid rgba(0,0,0,0.1);
+}
+
+.nav-link-border-left {
+  border-left: 0.5px solid rgba(0,0,0,0.1);
 }
