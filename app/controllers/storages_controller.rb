@@ -1,6 +1,6 @@
 class StoragesController < ApplicationController
   before_action :find_storage, only: %i[show update edit destroy]
-  skip_before_action :authenticate_user!, only: %i[index show]
+  skip_before_action :authenticate_user!, only: %i[index show new]
   def index
     @storages = Storage.all
   end
@@ -46,6 +46,6 @@ class StoragesController < ApplicationController
   end
 
   def storage_params
-    params.require(:storage).permit(:description, :size, { photos: [] }, :price_per_week, :price_per_month, :price_per_six_month, :location, :weight_capacity, :storage_type, :insurance, :insurance_type)
+    params.require(:storage).permit(:description, :size, { photos: [] }, :price_per_day, :price_per_week, :price_per_month, :price_per_six_month, :location, :weight_capacity, :storage_type, :insurance, :insurance_type)
   end
 end
