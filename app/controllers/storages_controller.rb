@@ -1,6 +1,6 @@
 class StoragesController < ApplicationController
   before_action :find_storage, only: %i[show update edit destroy]
-
+  skip_before_action :authenticate_user!, only: %i[index show]
   def index
     @storages = Storage.all
   end
@@ -14,6 +14,7 @@ class StoragesController < ApplicationController
 
   def create
     @storage = Storage.new(storage_params)
+    @storage.user = current_user
     if @storage.save
       redirect_to storage_path(@storage)
     else
