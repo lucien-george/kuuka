@@ -16,8 +16,8 @@
 }
 
 .home-banner-button {
-  height: 56px;
-  width: 266px;
+  height: 45px;
+  width: 240px;
   margin: 5px;
   display: flex;
   justify-content: space-between;
@@ -28,6 +28,10 @@
     color: white;
     margin: 0;
   }
+}
+
+.home-banner-button-link:hover {
+  text-decoration: none;
 }
 
 .home-banner-buttons {
@@ -46,3 +50,100 @@
     font-size: 23px;
   }
 }
+
+.home-info-bar {
+  height: 216px;
+  background-size: cover;
+  display: flex;
+  padding: 0 5%;
+}
+
+.home-info-bar-section {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home-info-bar-content {
+  color: white;
+  h1 {
+    font-weight: bold;
+  }
+  p {
+    font-size: 26px;
+    margin: 0;
+  }
+}
+
+.banner-mobile-app-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.kuuka-mobile {
+  width: 20%;
+}
+
+.move-belongings-banner {
+  height: 60vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15%;
+}
+.move-belongings-banner-container {
+  width: 55%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.move-belongings-banner-title h1 {
+  font-weight: bold;
+  font-size: 47px;
+}
+
+.move-belongings-banner-subtitle {
+  p {
+    font-weight: lighter;
+    font-size: 20px;
+  }
+}
+
+.storage-banner {
+  height: 60vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15%;
+}
+.storage-banner-container {
+  width: 55%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.storage-banner-title h1 {
+  text-align: right;
+  font-weight: bold;
+  font-size: 47px;
+}
+
+.storage-banner-subtitle {
+  p {
+    text-align: right;
+    font-weight: lighter;
+    font-size: 20px;
+  }
+}
+
+.garage {
+  width: 35%;
+}
+
