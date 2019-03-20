@@ -1,0 +1,79 @@
+.footer-kuuka {
+  background-color: #EEEBEF;
+  color: #8B8B8B;
+}
+
+.main-footer-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding: 0 5%;
+}
+
+.footer-kuuka-branding {
+  display: flex;
+  align-items: center;
+  h1 {
+    font-weight: bold;
+    color: #8B8B8B;
+  }
+
+  p {
+    color: #ADADAD;
+    font-weight: lighter;
+
+  }
+}
+
+.footer-bottom-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.kuuka-terms {
+  display: flex;
+  font-weight: lighter;
+  p {
+    color: #ADADAD;
+  }
+  a {
+    color: #ADADAD;
+  }
+}
+
+.seo {
+  font-weight: lighter;
+  p {
+    color: #ADADAD;
+  }
+  a {
+    color: #ADADAD;
+  }
+}
+
+.footer-contact {
+  text-align: right;
+  h5 {
+    font-weight: 600;
+  }
+  p {
+    font-weight: lighter;
+    color: #ADADAD;
+    margin-bottom: 5px;
+  }
+}
+
+.social-links {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.link-circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #918696;
+  margin-left: 20px;
+}
