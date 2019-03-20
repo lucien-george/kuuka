@@ -1,5 +1,7 @@
 // Import page-specific CSS files here.
+@import "mixins";
 @import "home";
+@import "new_storage";
 
 body {
   background-color: white;
