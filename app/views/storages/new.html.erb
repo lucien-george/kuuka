@@ -2,9 +2,27 @@
   <%= image_tag('list_your_space_background.png', class:'list-your-space-background') %>
   <div class="container">
     <div class="main-screen">
-      <h1 class="title">List Your Space</h1>
-      <%= image_tag('triangles.png') %>
-      <p>Make money from your garage</p>
+      <div class="main-title">
+        <h1 class="title">List Your Space</h1>
+        <%= image_tag('triangles.png') %>
+        <p class="tag-line">Make money from your garage</p>
+      </div>
+      <p class="secondary-tag-line">Tess us about your property:</p>
     </div>
+    <%= simple_form_for @storage do |f| %>
+      <%= f.input :storage_type, as: :radio_buttons, collection: ['Spare room', 'Garage', 'Locked Space', 'Parking', 'House Space'] %>
+      <%= f.input :size %>
+      <%= f.input :weight_capacity %>
+      <%= f.input :location %>
+      <%= f.input :price_per_day %>
+      <%= f.input :price_per_week %>
+      <%= f.input :price_per_month %>
+      <%= f.input :price_per_six_month %>
+      <%= f.input :insurance %>
+      <%= f.input :insurance_type %>
+      <input multiple="multiple" type="file" name="storage[photos][]" id="storage_photos">
+      <%= f.input :photos_cache, as: :hidden %>
+      <%= f.submit %>
+    <% end %>
   </div>
 </div>
