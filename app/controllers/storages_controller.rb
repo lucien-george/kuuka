@@ -46,6 +46,6 @@ class StoragesController < ApplicationController
   end
 
   def storage_params
-    params.require(:storage).permit(:description, :size, { photos: [] })
+    params.require(:storage).permit(:description, :size, { photos: [] }, :price_per_week, :price_per_month, :price_per_six_month, :location, :weight_capacity, :storage_type, :insurance, :insurance_type)
   end
 end
