@@ -1,10 +1,10 @@
-<div class="footer-kuuka">
-  <%= image_tag 'footer-bar.png' %>
+<div class="footer-kuuka d-none d-sm-block">
+  <%= image_tag 'footer-bar.png', class: "footer-bar" %>
   <div class="main-footer-info">
     <div class="footer-kuuka-branding">
       <div>
         <h1>Kuuka</h1>
-        <p>We help you every step of the way</p>
+        <p>We help you move every step of the way</p>
       </div>
     </div>
     <div class="footer-contact">
@@ -30,3 +30,30 @@
     </div>
   </div>
 </div>
+
+<div class="footer-kuuka d-block d-sm-none">
+  <%= image_tag 'footer-bar.png' %>
+  <div class="main-footer-info">
+    <h1>Kuuka</h1>
+    <p>We help you move every step of the way</p>
+  </div>
+  <div class="footer-contact">
+    <h1>Contact</h1>
+    <p>contact@kuuka.com</p>
+    <p>138 Kingsland, London, UK, E2 US7</p>
+  </div>
+  <div class="kuuka-terms">
+    <p style="margin-right: 10px;">Kuuka App All Rights Reserved</p>
+    <%= link_to 'Terms & Conditions', root_path %>
+  </div>
+  <hr>
+  <div class="social-links">
+    <div class="link-circle"></div>
+    <div class="link-circle"></div>
+    <div class="link-circle"></div>
+    <div class="link-circle"></div>
+  </div>
+  <p class="mobile-seo">Developed by: Hoxton Digital | <%= link_to 'London Web Development', 'https://www.hoxton-digital.com' %></p>
+</div>
+
+
