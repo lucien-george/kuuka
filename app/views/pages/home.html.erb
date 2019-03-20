@@ -7,7 +7,7 @@
       <p>A mobile app that will help people move only by moving a finger</p>
     </div>
     <div class="home-banner-buttons">
-      <%= link_to root_path do %>
+      <%= link_to root_path, class: "home-banner-button-link" do %>
         <div class="home-banner-button" style="background-color: #3C56F1; box-shadow: 0 5px 11px rgba(60,86,241,0.3);">
           <p>Storage</p>
           <div>
@@ -18,7 +18,7 @@
           </div>
         </div>
       <% end %>
-      <%= link_to root_path do %>
+      <%= link_to root_path, class: "home-banner-button-link" do %>
         <div class="home-banner-button" style="background-color: #00BDC7; box-shadow: 0 5px 11px rgba(0,189,199,0.3);">
           <p>List my Space</p>
           <div>
@@ -29,6 +29,48 @@
           </div>
         </div>
       <% end %>
+    </div>
+  </div>
+</div>
+<div class="home-info-bar" style="background-image: url('<%= asset_url 'info-bar.png' %>')">
+  <div class="home-info-bar-section">
+    <div class="home-info-bar-content">
+      <h1>256</h1>
+      <p>signed-up users</p>
+    </div>
+  </div>
+  <div class="home-info-bar-section">
+    <div class="home-info-bar-content">
+      <h1>1000</h1>
+      <p>website visits</p>
+    </div>
+  </div>
+  <div class="home-info-bar-section">
+    <div class="home-info-bar-content">
+      <h1>12</h1>
+      <p>angel investors</p>
+    </div>
+  </div>
+</div>
+<div class="move-belongings-banner">
+  <div class="move-belongings-banner-container">
+    <div class="move-belongings-banner-title">
+      <h1>Move your belongings on demand.</h1>
+    </div>
+    <div class="move-belongings-banner-subtitle">
+      <p>Whether you want to move your belongings now or at a determined time our mobile app is designed to fulfil all needs</p>
+    </div>
+  </div>
+    <%= image_tag 'kuuka-mobile.png', class: "kuuka-mobile" %>
+</div>
+<div class="storage-banner">
+    <%= image_tag 'garage.png', class: "garage" %>
+  <div class="storage-banner-container">
+    <div class="storage-banner-title">
+      <h1>Your extra space means extra money.</h1>
+    </div>
+    <div class="storage-banner-subtitle">
+      <p>Whether you want to move your belongings now or at a determined time our mobile app is designed to fulfil all needs</p>
     </div>
   </div>
 </div>
