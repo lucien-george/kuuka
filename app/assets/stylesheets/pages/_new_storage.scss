@@ -1,0 +1,12 @@
+.storage-wrapper {
+  width: 100vw;
+  min-height: calc(100vh - 82px);
+}
+
+.list-your-space-background {
+  position: fixed;
+  width: 100vw;
+  object-fit: contain;
+  top: -10%;
+  z-index: -1;
+}
