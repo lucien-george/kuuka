@@ -20,8 +20,10 @@
       <%= f.input :price_per_six_month %>
       <%= f.input :insurance %>
       <%= f.input :insurance_type %>
-      <input multiple="multiple" type="file" name="storage[photos][]" id="storage_photos">
-      <%= f.input :photos_cache, as: :hidden %>
+      <%= f.simple_fields_for :photos do |p| %>
+        <%= p.input :url, as: :file, input_html: { multiple: true }, name:"photos[url][]" %>
+        <%= p.input :url_cache, as: :hidden %>
+      <% end %>
       <%= f.submit %>
     <% end %>
   </div>

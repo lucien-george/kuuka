@@ -14,6 +14,9 @@ class StoragesController < ApplicationController
 
   def create
     @storage = Storage.new(storage_params)
+    params[:storage][:photos][:url].each do |url|
+      Photo.create(url: url, storage: @storage)
+    end
     @storage.user = current_user
     if @storage.save
       redirect_to storage_path(@storage)
@@ -47,6 +50,6 @@ class StoragesController < ApplicationController
   end
 
   def storage_params
-    params.require(:storage).permit(:size, { photos: [] }, :price_per_day, :price_per_week, :price_per_month, :price_per_six_month, :location, :weight_capacity, :storage_type, :insurance, :insurance_type)
+    params.require(:storage).permit(:size, :price_per_day, :price_per_week, :price_per_month, :price_per_six_month, :location, :weight_capacity, :storage_type, :insurance, :insurance_type)
   end
 end

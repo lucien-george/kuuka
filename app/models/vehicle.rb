@@ -1,5 +1,6 @@
 class Vehicle < ApplicationRecord
   belongs_to :user
+  has_many :photos, dependent: :destroy
   validates :make, presence: true
   validates :year, presence: true, numericality: { only_integer: true }
   validates :owner, presence: true
@@ -8,5 +9,4 @@ class Vehicle < ApplicationRecord
   validates :diesel, presence: true
   validates :property_insurance, presence: true
   validates :insurance, presence: true
-  mount_uploaders :photos, PhotoUploader
 end

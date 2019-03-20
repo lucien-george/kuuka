@@ -1,5 +1,6 @@
 class Storage < ApplicationRecord
   belongs_to :user
+  has_many :photos, dependent: :destroy
   validates :size, presence: true, numericality: { only_integer: true }
   validates :price_per_day, presence: true, numericality: { only_integer: true }
   validates :price_per_week, presence: true, numericality: { only_integer: true }
@@ -10,5 +11,4 @@ class Storage < ApplicationRecord
   validates :storage_type, presence: true
   validates :insurance, presence: true
   validates :insurance_type, presence: true
-  mount_uploaders :photos, PhotoUploader
 end
