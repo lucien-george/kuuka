@@ -47,6 +47,6 @@ class VehiclesController < ApplicationController
   end
 
   def storage_params
-    params.require(:vehicle).permit(:make, :year, :owner, :color, :inspection_card, :diesel, :property_insurance, :insurance)
+    params.require(:vehicle).permit(:make, :year, :owner, :color, :inspection_card, :diesel, :property_insurance, :insurance, { photos: [] })
   end
 end

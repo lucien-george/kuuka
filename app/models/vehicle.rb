@@ -8,4 +8,5 @@ class Vehicle < ApplicationRecord
   validates :diesel, presence: true
   validates :property_insurance, presence: true
   validates :insurance, presence: true
+  mount_uploaders :photos, PhotoUploader
 end
