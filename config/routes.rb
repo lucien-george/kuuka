@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :vehicles
   resources :storages
+  get "/how_it_works", to: 'pages#how_it_works'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
