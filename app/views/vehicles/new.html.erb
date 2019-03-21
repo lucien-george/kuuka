@@ -1,0 +1,19 @@
+<div class="vehicle-wrapper">
+  <div class="container">
+    <%= simple_form_for @vehicle do |f| %>
+      <%= f.input :make %>
+      <%= f.input :year %>
+      <%= f.input :owner, as: :radio_buttons %>
+      <%= f.input :color %>
+      <%= f.input :inspection_card %>
+      <%= f.input :diesel, as: :radio_buttons %>
+      <%= f.input :property_insurance %>
+      <%= f.input :insurance %>
+      <%= f.simple_fields_for :photos do |p| %>
+        <%= p.input :url, as: :file, input_html: { multiple: true }, name:"photos[url][]" %>
+        <%= p.input :url_cache, as: :hidden %>
+      <% end %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>

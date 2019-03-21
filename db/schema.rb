@@ -18,11 +18,11 @@ ActiveRecord::Schema.define(version: 2019_03_20_174848) do
   create_table "photos", force: :cascade do |t|
     t.string "url"
     t.bigint "storage_id"
-    t.bigint "vehicles_id"
+    t.bigint "vehicle_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["storage_id"], name: "index_photos_on_storage_id"
-    t.index ["vehicles_id"], name: "index_photos_on_vehicles_id"
+    t.index ["vehicle_id"], name: "index_photos_on_vehicle_id"
   end
 
   create_table "storages", force: :cascade do |t|
@@ -76,7 +76,7 @@ ActiveRecord::Schema.define(version: 2019_03_20_174848) do
   end
 
   add_foreign_key "photos", "storages"
-  add_foreign_key "photos", "vehicles", column: "vehicles_id"
+  add_foreign_key "photos", "vehicles"
   add_foreign_key "storages", "users"
   add_foreign_key "vehicles", "users"
 end
