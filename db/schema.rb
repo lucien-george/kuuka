@@ -10,17 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_20_153153) do
+ActiveRecord::Schema.define(version: 2019_03_20_174848) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "storages", force: :cascade do |t|
-    t.bigint "user_id"
-    t.integer "size"
+  create_table "photos", force: :cascade do |t|
+    t.string "url"
+    t.bigint "storage_id"
+    t.bigint "vehicle_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.json "photos"
+    t.index ["storage_id"], name: "index_photos_on_storage_id"
+    t.index ["vehicle_id"], name: "index_photos_on_vehicle_id"
+  end
+
+  create_table "storages", force: :cascade do |t|
+    t.bigint "user_id"
+    t.integer "height"
+    t.integer "width"
+    t.integer "depth"
+    t.string "unit"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer "price_per_week"
     t.integer "price_per_month"
     t.integer "price_per_six_month"
@@ -63,10 +75,11 @@ ActiveRecord::Schema.define(version: 2019_03_20_153153) do
     t.string "insurance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.json "photos"
     t.index ["user_id"], name: "index_vehicles_on_user_id"
   end
 
+  add_foreign_key "photos", "storages"
+  add_foreign_key "photos", "vehicles"
   add_foreign_key "storages", "users"
   add_foreign_key "vehicles", "users"
 end

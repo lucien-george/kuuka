@@ -6,3 +6,9 @@
 body {
   background-color: white;
 }
+
+// required star styled in forms
+abbr {
+  text-decoration: none !important;
+  color: $primary;
+}

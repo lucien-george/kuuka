@@ -10,14 +10,17 @@ class VehiclesController < ApplicationController
   end
 
   def new
-    @vehicle = Storage.new
+    @vehicle = Vehicle.new
   end
 
   def create
-    @vehicle = Storage.new(storage_params)
+    @vehicle = Vehicle.new(vehicle_params)
     @vehicle.user = current_user
     if @vehicle.save
-      redirect_to storage_path(@vehicle)
+      params[:vehicle][:photos][:url]&.each do |url|
+        @vehicle.photos.create(url: url)
+      end
+      redirect_to vehicle_path(@vehicle)
     else
       render :new
     end
@@ -27,9 +30,9 @@ class VehiclesController < ApplicationController
   end
 
   def update
-    @vehicle.update(storage_params)
+    @vehicle.update(vehicle_params)
     if @vehicle.save
-      redirect_to storage_path(@vehicle)
+      redirect_to vehicle_path(@vehicle)
     else
       render :edit
     end
@@ -42,11 +45,11 @@ class VehiclesController < ApplicationController
 
   private
 
-  def find_storage
+  def find_vehicle
     @vehicle = Vehicle.find(params[:id])
   end
 
-  def storage_params
-    params.require(:vehicle).permit(:make, :year, :owner, :color, :inspection_card, :diesel, :property_insurance, :insurance, { photos: [] })
+  def vehicle_params
+    params.require(:vehicle).permit(:make, :year, :owner, :color, :inspection_card, :diesel, :property_insurance, :insurance)
   end
 end
