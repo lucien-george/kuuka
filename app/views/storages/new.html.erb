@@ -23,13 +23,25 @@
         </div>
       </fieldset>
       <p class="form-label">Dimensions:</p>
-      <div class="new-storage-form-section">
-        <%= f.input :height, label: false, placeholder:'height', input_html: { class: 'new-storage-input'} %>
-        <%= f.input :width, label: false, placeholder:'width', input_html: { class: 'new-storage-input'} %>
-        <%= f.input :depth, label: false, placeholder:'depth', input_html: { class: 'new-storage-input'} %>
-        <%= f.input :weight_capacity, label: false, placeholder:'weight capacity', input_html: { class: 'new-storage-input'} %>
-        <%= f.input :location, label: false, placeholder:'location', input_html: { class: 'new-storage-input'} %>
-      </div>
+      <fieldset class="form-group radio_buttons optional storage_unit">
+        <legend class="col-form-label pt-0">Unit</legend>
+        <input type="hidden" name="storage[unit]" value="">
+        <div class="unit-div">
+          <div class="form-check">
+            <input class="form-check-input radio_buttons optional" type="radio" value="m" name="storage[unit]" id="storage_unit_m">
+            <label class="collection_radio_buttons" for="storage_unit_m">m</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input radio_buttons optional" type="radio" value="ft" name="storage[unit]" id="storage_unit_ft">
+            <label class="collection_radio_buttons" for="storage_unit_ft">ft</label>
+          </div>
+        </div>
+      </fieldset>
+      <%= f.input :height, label: false, placeholder:'height', input_html: { class: 'new-storage-input'} %>
+      <%= f.input :width, label: false, placeholder:'width', input_html: { class: 'new-storage-input'} %>
+      <%= f.input :depth, label: false, placeholder:'depth', input_html: { class: 'new-storage-input'} %>
+      <%= f.input :weight_capacity, label: false, placeholder:'weight capacity', input_html: { class: 'new-storage-input'} %>
+      <%= f.input :location, label: false, placeholder:'location', input_html: { class: 'new-storage-input'} %>
       <p class="form-label">Pricing:</p>
       <div class="new-storage-form-section">
         <%= f.input :price_per_day, label: false, placeholder:'price per day', input_html: { class: 'new-storage-input'} %>
@@ -46,7 +58,7 @@
         <%= p.input :url, as: :file, input_html: { multiple: true, class: 'd-none' }, label_html: { class: 'upload-photo'}, label: "<p>Upload a photograph</p> #{image_tag('upload_image.png')}".html_safe, name:"photos[url][]", placeholder:'size', required: false %>
         <%= p.input :url_cache, as: :hidden %>
       <% end %>
-      <%= f.button :button, type: :submit do %>
+      <%= f.button :button, type: :submit, class: 'no-padding' do %>
         <div class="submit-new-storage-btn">
           <p>Send my details</p><i class="fas fa-caret-right"></i>
         </div>

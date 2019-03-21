@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2019_03_20_174848) do
     t.integer "height"
     t.integer "width"
     t.integer "depth"
+    t.string "unit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "price_per_week"

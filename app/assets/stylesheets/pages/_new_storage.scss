@@ -40,7 +40,7 @@
   }
 
   img {
-    margin: 17px 0 0 0;
+    // margin: 17px 0 0 0;
   }
 
 }
@@ -56,10 +56,14 @@
   overflow: scroll;
 }
 
+.no-padding {
+  padding: 0;
+}
+
 .storage-type {
   width: 181px;
   height: 181px;
-  margin: 17px;
+  // margin: 17px;
   @include flex-column;
   flex-grow: 0;
   flex-shrink: 0;
@@ -88,7 +92,7 @@
   background: #FFFFFF;
   border: 3px solid #16BAC5;
   border-radius: 5px;
-  margin-left: 17px;
+  // margin-left: 17px;
   padding: 17px 0;
   width: 311px;
   cursor: pointer;
@@ -122,8 +126,15 @@
   }
 }
 
+.unit-div {
+  @include flex-row;
+  .form-check {
+    margin: 0 10px;
+  }
+}
+
 .form-label {
-  margin: 5px 17px;
+  // margin: 5px 17px;
   font-family: $headers-font;
   font-weight: bold;
   font-size: 20px;
@@ -137,7 +148,7 @@
 }
 
 .new-storage-input {
-  margin: 0 17px !important;
+  // margin: 0 17px !important;
 }
 
 .active {
