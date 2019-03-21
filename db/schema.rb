@@ -27,7 +27,9 @@ ActiveRecord::Schema.define(version: 2019_03_20_174848) do
 
   create_table "storages", force: :cascade do |t|
     t.bigint "user_id"
-    t.integer "size"
+    t.integer "height"
+    t.integer "width"
+    t.integer "depth"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "price_per_week"

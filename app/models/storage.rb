@@ -1,7 +1,9 @@
 class Storage < ApplicationRecord
   belongs_to :user
   has_many :photos, dependent: :destroy
-  validates :size, presence: true, numericality: { only_integer: true }
+  validates :height, presence: true, numericality: { only_integer: true }
+  validates :width, presence: true, numericality: { only_integer: true }
+  validates :depth, presence: true, numericality: { only_integer: true }
   validates :price_per_day, presence: true, numericality: { only_integer: true }
   validates :price_per_week, presence: true, numericality: { only_integer: true }
   validates :price_per_month, presence: true, numericality: { only_integer: true }
