@@ -14,16 +14,15 @@ class StoragesController < ApplicationController
 
   def create
     @storage = Storage.new(storage_params)
-    params[:storage][:photos][:url].each do |url|
-      Photo.create(url: url, storage: @storage)
-    end
     @storage.user = current_user
     if @storage.save
+      params[:storage][:photos][:url].each do |url|
+        @storage.photos.create(url: url)
+      end
       redirect_to storage_path(@storage)
     else
       render :new
     end
-    raise
   end
 
   def edit
