@@ -294,7 +294,25 @@
     align-items: center;
   }
   p {
-    color: #A8A8A8;
+    color: #363431;
+    margin: 0;
+  }
+}
+
+.cover-options-image {
+  width: 100%;
+}
+
+.cover-option-container {
+  height: 300px;
+  width: 200px;
+  background: #F4F2F5;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 50px;
   }
 }
 
