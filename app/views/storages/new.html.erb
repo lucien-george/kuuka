@@ -19,17 +19,17 @@
           <% end %>
         </div>
       </fieldset>
-      <%= f.input :size %>
-      <%= f.input :weight_capacity %>
-      <%= f.input :location %>
-      <%= f.input :price_per_day %>
-      <%= f.input :price_per_week %>
-      <%= f.input :price_per_month %>
-      <%= f.input :price_per_six_month %>
-      <%= f.input :insurance %>
-      <%= f.input :insurance_type %>
+      <%= f.input :size, label: false, placeholder:'size' %>
+      <%= f.input :weight_capacity, label: false, placeholder:'weight capacity' %>
+      <%= f.input :location, label: false, placeholder:'location' %>
+      <%= f.input :price_per_day, label: false, placeholder:'price per day' %>
+      <%= f.input :price_per_week, label: false, placeholder:'price per week' %>
+      <%= f.input :price_per_month, label: false, placeholder:'price per month' %>
+      <%= f.input :price_per_six_month, label: false, placeholder:'price per six month' %>
+      <%= f.input :insurance, label: false, placeholder:'insurance' %>
+      <%= f.input :insurance_type, label: false, placeholder:'insurance type' %>
       <%= f.simple_fields_for :photos do |p| %>
-        <%= p.input :url, as: :file, input_html: { multiple: true }, name:"photos[url][]" %>
+        <%= p.input :url, as: :file, input_html: { multiple: true }, name:"photos[url][]", label: false, placeholder:'size' %>
         <%= p.input :url_cache, as: :hidden %>
       <% end %>
       <%= f.submit %>
