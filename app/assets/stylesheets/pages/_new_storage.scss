@@ -14,7 +14,7 @@
 .main-screen {
   width: 100%;
   height: calc(100vh - 82px);
-  padding: 125px 0;
+  padding: 125px 0 20px 0;
   @include flex-column;
   justify-content: space-around;
   align-items: center;
@@ -60,18 +60,84 @@
   width: 181px;
   height: 181px;
   margin: 17px;
-  @include flex-row;
+  @include flex-column;
   flex-grow: 0;
   flex-shrink: 0;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: 1px solid #E4E4E4;
   border-radius: 2px;
   img {
-    width: 50px;
+    width: 52px;
+    object-fit: contain;
+    flex-grow: 1;
+    text-align: center;
   }
+  p {
+    color: #8B8B8B;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: $headers-font;
+  }
+}
+
+.upload-photo {
+  background: #FFFFFF;
+  border: 3px solid #16BAC5;
+  border-radius: 5px;
+  margin-left: 17px;
+  padding: 17px 0;
+  width: 311px;
+  cursor: pointer;
+  @include flex-row;
+  justify-content: space-around;
+  align-items: center;
+  p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 20px;
+    color: #15949D;
+  }
+  &:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.submit-new-storage-btn {
+  @include flex-row;
+  justify-content: space-around;
+  align-items: center;
+  background: #16BAC5;
+  border-radius: 5px;
+  padding: 10px 32px;
+  p {
+    color: #FFFFFF;
+    margin: 0 10px 0 0;
+  }
+  i {
+    color: #69DFE7;
+  }
+}
+
+.form-label {
+  margin: 5px 17px;
+  font-family: $headers-font;
+  font-weight: bold;
+  font-size: 20px;
+  color: #171D1C;
+}
+
+.new-storage-form-section {
+  @include flex-row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.new-storage-input {
+  margin: 0 17px !important;
 }
 
 .active {

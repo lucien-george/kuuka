@@ -15,24 +15,40 @@
         <div class="storage-types">
           <% @storage_types.each_with_index do |storage_type| %>
             <input class="form-check-input radio_buttons required d-none" type="radio" value="<%= storage_type %>" name="storage[storage_type]" id="storage_storage_type_<%= storage_type.downcase.split(' ').join('_') %>">
-            <label class="storage-type collection_radio_buttons" for="storage_storage_type_<%= storage_type.downcase.split(' ').join('_') %>"><%= image_tag("type_#{storage_type.downcase.split(' ').join('_')}") %></label>
+            <label class="storage-type collection_radio_buttons" for="storage_storage_type_<%= storage_type.downcase.split(' ').join('_') %>">
+              <%= image_tag("type_#{storage_type.downcase.split(' ').join('_')}") %>
+              <p><%= storage_type %></p>
+            </label>
           <% end %>
         </div>
       </fieldset>
-      <%= f.input :size, label: false, placeholder:'size' %>
-      <%= f.input :weight_capacity, label: false, placeholder:'weight capacity' %>
-      <%= f.input :location, label: false, placeholder:'location' %>
-      <%= f.input :price_per_day, label: false, placeholder:'price per day' %>
-      <%= f.input :price_per_week, label: false, placeholder:'price per week' %>
-      <%= f.input :price_per_month, label: false, placeholder:'price per month' %>
-      <%= f.input :price_per_six_month, label: false, placeholder:'price per six month' %>
-      <%= f.input :insurance, label: false, placeholder:'insurance' %>
-      <%= f.input :insurance_type, label: false, placeholder:'insurance type' %>
+      <p class="form-label">Size & Demographics:</p>
+      <div class="new-storage-form-section">
+        <%= f.input :size, label: false, placeholder:'size', input_html: { class: 'new-storage-input'} %>
+        <%= f.input :weight_capacity, label: false, placeholder:'weight capacity', input_html: { class: 'new-storage-input'} %>
+        <%= f.input :location, label: false, placeholder:'location', input_html: { class: 'new-storage-input'} %>
+      </div>
+      <p class="form-label">Pricing:</p>
+      <div class="new-storage-form-section">
+        <%= f.input :price_per_day, label: false, placeholder:'price per day', input_html: { class: 'new-storage-input'} %>
+        <%= f.input :price_per_week, label: false, placeholder:'price per week', input_html: { class: 'new-storage-input'} %>
+        <%= f.input :price_per_month, label: false, placeholder:'price per month', input_html: { class: 'new-storage-input'} %>
+        <%= f.input :price_per_six_month, label: false, placeholder:'price per six month', input_html: { class: 'new-storage-input'} %>
+      </div>
+      <p class="form-label">Insurance:</p>
+      <div class="new-storage-form-section">
+        <%= f.input :insurance, label: false, placeholder:'insurance', input_html: { class: 'new-storage-input'} %>
+        <%= f.input :insurance_type, label: false, placeholder:'insurance type', input_html: { class: 'new-storage-input'} %>
+      </div>
       <%= f.simple_fields_for :photos do |p| %>
-        <%= p.input :url, as: :file, input_html: { multiple: true }, name:"photos[url][]", label: false, placeholder:'size' %>
+        <%= p.input :url, as: :file, input_html: { multiple: true, class: 'd-none' }, label_html: { class: 'upload-photo'}, label: "<p>Upload a photograph</p> #{image_tag('upload_image.png')}".html_safe, name:"photos[url][]", placeholder:'size', required: false %>
         <%= p.input :url_cache, as: :hidden %>
       <% end %>
-      <%= f.submit %>
+      <%= f.button :button, type: :submit do %>
+        <div class="submit-new-storage-btn">
+          <p>Send my details</p><i class="fas fa-caret-right"></i>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>
