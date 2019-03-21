@@ -10,7 +10,15 @@
       <p class="secondary-tag-line">Tess us about your property:</p>
     </div>
     <%= simple_form_for @storage do |f| %>
-      <%= f.input :storage_type, as: :radio_buttons, collection: ['Spare room', 'Garage', 'Locked Space', 'Parking', 'House Space'] %>
+      <fieldset class="form-group radio_buttons required storage_storage_type">
+        <input type="hidden" name="storage[storage_type]" value="">
+        <div class="storage-types">
+          <% @storage_types.each_with_index do |storage_type| %>
+            <input class="form-check-input radio_buttons required d-none" type="radio" value="<%= storage_type %>" name="storage[storage_type]" id="storage_storage_type_<%= storage_type.downcase.split(' ').join('_') %>">
+            <label class="storage-type collection_radio_buttons" for="storage_storage_type_<%= storage_type.downcase.split(' ').join('_') %>"><%= image_tag("type_#{storage_type.downcase.split(' ').join('_')}") %></label>
+          <% end %>
+        </div>
+      </fieldset>
       <%= f.input :size %>
       <%= f.input :weight_capacity %>
       <%= f.input :location %>
@@ -28,3 +36,16 @@
     <% end %>
   </div>
 </div>
+<script>
+  storageTypes = document.querySelectorAll('.storage-type');
+  storageTypes.forEach((type) => {
+    type.addEventListener('click', (event) => {
+      checkedLabel = document.querySelector('input:checked');
+      if (checkedLabel) {
+        checkedLabel = checkedLabel.nextElementSibling;
+        checkedLabel.classList.remove('active');
+      }
+      event.currentTarget.classList.add('active');
+    })
+  })
+</script>

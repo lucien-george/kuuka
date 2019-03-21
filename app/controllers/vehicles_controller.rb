@@ -17,7 +17,7 @@ class VehiclesController < ApplicationController
     @vehicle = Vehicle.new(vehicle_params)
     @vehicle.user = current_user
     if @vehicle.save
-      params[:vehicle][:photos][:url].each do |url|
+      params[:vehicle][:photos][:url]&.each do |url|
         @vehicle.photos.create(url: url)
       end
       redirect_to vehicle_path(@vehicle)

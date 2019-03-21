@@ -10,13 +10,15 @@ class StoragesController < ApplicationController
 
   def new
     @storage = Storage.new
+    @storage_types = ['Spare Room', 'Garage', 'Locked Space', 'Parking', 'House Space']
   end
 
   def create
     @storage = Storage.new(storage_params)
+    @storage_types = ['Spare Room', 'Garage', 'Locked Space', 'Parking', 'House Space']
     @storage.user = current_user
     if @storage.save
-      params[:storage][:photos][:url].each do |url|
+      params[:storage][:photos][:url]&.each do |url|
         @storage.photos.create(url: url)
       end
       redirect_to storage_path(@storage)
