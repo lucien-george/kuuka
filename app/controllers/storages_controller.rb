@@ -1,6 +1,6 @@
 class StoragesController < ApplicationController
   before_action :find_storage, only: %i[show update edit destroy]
-  skip_before_action :authenticate_user!, only: %i[index show]
+  skip_before_action :authenticate_user!, only: %i[index show new create]
   def index
     @storages = Storage.all
   end
