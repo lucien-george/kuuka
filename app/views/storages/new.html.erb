@@ -16,7 +16,7 @@
           <% @storage_types.each_with_index do |storage_type| %>
             <input class="form-check-input radio_buttons required d-none" type="radio" value="<%= storage_type %>" name="storage[storage_type]" id="storage_storage_type_<%= storage_type.downcase.split(' ').join('_') %>">
             <label class="storage-type collection_radio_buttons" for="storage_storage_type_<%= storage_type.downcase.split(' ').join('_') %>">
-              <%= image_tag("type_#{storage_type.downcase.split(' ').join('_')}") %>
+              <%= image_tag("type_#{storage_type.downcase.split(' ').join('_')}.png") %>
               <p><%= storage_type %></p>
             </label>
           <% end %>
