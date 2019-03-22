@@ -6,7 +6,7 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :age, presence: true, numericality: { only_integer: true }
+  # validates :age, presence: true, numericality: { only_integer: true }
   has_many :storages, dependent: :destroy
   has_many :vehicles, dependent: :destroy
   mount_uploader :photo, PhotoUploader

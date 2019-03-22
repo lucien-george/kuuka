@@ -166,6 +166,23 @@
   flex-wrap: wrap;
 }
 
+#email-error-message {
+  color: $red;
+  margin: 3px 0;
+}
+
+.user-information {
+  .form-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .form-control {
+      flex: 0 0 23%;
+      margin: 0 30px 0 0;
+    }
+  }
+}
+
 .photo-preview {
   width: 150px;
   object-fit: contain;
