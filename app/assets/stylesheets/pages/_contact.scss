@@ -1,0 +1,123 @@
+.contact-wrapper {
+  background-image: asset_url('contact-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - 67.5px);
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  @media only screen and (max-width: 576px) {
+    background-image: asset_url('contact-background-mobile.png');
+    background-size: contain;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 55px);
+
+  }
+}
+
+.contact-form-container {
+  width: 60vw;
+  height: 50vh;
+  @media only screen and (max-width: 576px) {
+    width: 80vw;
+    height: auto;
+  }
+  h1 {
+    color: white;
+    margin-bottom: 50px;
+    font-size: 55px;
+    font-weight: bold;
+    @media only screen and (max-width: 1200px) {
+      font-size: 45px;
+    }
+    @media only screen and (max-width: 992px) {
+      font-size: 35px;
+    }
+    @media only screen and (max-width: 768px) {
+      font-size: 25px;
+    }
+    @media only screen and (max-width: 576px) {
+      font-size: 15px;
+      margin-bottom: 10px;
+
+    }
+  }
+}
+
+.contact-form {
+  height: 100%;
+  background: white;
+  border: 0.5px solid #DADADA;
+  box-shadow: 0 3px 2px #A8A8A8;
+  border-radius: 5px;
+  padding: 70px 50px;
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width: 992px) {
+    padding: 70px 40px;
+    justify-content: center;
+  }
+  @media only screen and (max-width: 576px) {
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+  }
+
+}
+
+.contact-form-left {
+  width: 60%;
+  @media only screen and (max-width: 1200px) {
+    width: 70%;
+  }
+  @media only screen and (max-width: 992px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+  }
+  .form-group {
+    margin-bottom: 25px;
+  }
+}
+
+// .contact-form-name {
+//   display: flex;
+// }
+
+.contact-form-button {
+  width: 150px;
+  height: 43px;
+  border-radius: 5px;
+  color: white;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+    padding: 0 30px;
+
+  }
+  p {
+    font-size: 16px;
+    margin: 0;
+    font-weight: lighter;
+  }
+}
+
+.contact-first-name {
+  // margin-right: 30px;
+}
+
+.contact-message {
+  height: 100px !important;
+  resize: none;
+}
