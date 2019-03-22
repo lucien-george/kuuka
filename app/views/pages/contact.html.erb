@@ -1,0 +1,27 @@
+<div class="contact-wrapper">
+  <div class="contact-form-container">
+    <h1>Stay in Touch</h1>
+    <div class="contact-form">
+      <div class="contact-form-left">
+        <%= simple_form_for '/contact', url: contact_path do |f| %>
+          <div class="contact-form-name">
+            <div class="row">
+              <div class="col-sm-6">
+                <%= f.input :first_name, label: false, placeholder:'first name', input_html: { class: "contact-first-name" } %>
+              </div>
+              <div class="col-sm-6">
+                <%= f.input :last_name, label: false, placeholder:'last name', input_html: { class: "contact-last-name" } %>
+              </div>
+            </div>
+          </div>
+            <%= f.input :email, label: false, placeholder:'email' %>
+          <%= f.input :message, as: :text, label: false, placeholder:'type your message here', input_html: { class: "contact-message" } %>
+          <%= f.button :button, type: :submit,  class: "contact-form-button" do %>
+            <p>Submit</p>
+            <%= image_tag 'right-arrow.png', height: 25 %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
