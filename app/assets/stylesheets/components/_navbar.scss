@@ -3,6 +3,7 @@
   background: white;
   border-bottom: 0.5px solid rgba(0,0,0,0.1);
   padding: 0 0 0 15px;
+  height: 55px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -27,4 +28,11 @@
 
 .nav-link-border-left {
   border-left: 0.5px solid rgba(0,0,0,0.1);
+}
+
+.navbar-toggler {
+  border-radius: 5px;
+  font-size: 14px;
+  color: white !important;
+  background: #3C56F1;
 }
