@@ -9,38 +9,12 @@
           <%= f.input :year, label: false, placeholder:'year' %>
         </div>
         <div class="new-storage-form-section">
-          <fieldset class="form-group radio_buttons optional vehicle_owner">
-            <div class="unit-div">
-              <p>Owner</p>
-              <input type="hidden" name="vehicle[owner]" value="">
-              <div class="form-check">
-                <input class="form-check-input radio_buttons optional" type="radio" value="true" name="vehicle[owner]" id="vehicle_owner_true">
-                <label class="collection_radio_buttons" for="vehicle_owner_true">Yes</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input radio_buttons optional" readonly="readonly" type="radio" value="false" name="vehicle[owner]" id="vehicle_owner_false">
-                <label class="collection_radio_buttons" for="vehicle_owner_false">No</label>
-              </div>
-            </div>
-          </fieldset>
+          <%= f.input :owner, as: :select, label: false, prompt: 'owner' %>
           <%= f.input :color, label: false, placeholder:'color' %>
         </div>
         <div class="new-storage-form-section">
           <%= f.input :inspection_card, label: false, placeholder:'inspection card' %>
-          <fieldset class="form-group radio_buttons optional vehicle_diesel">
-            <div class="unit-div">
-              <p>Diesel</p>
-              <input type="hidden" name="vehicle[diesel]" value="">
-              <div class="form-check">
-                <input class="form-check-input radio_buttons optional" type="radio" value="true" name="vehicle[diesel]" id="vehicle_diesel_true">
-                <label class="collection_radio_buttons" for="vehicle_diesel_true">Yes</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input radio_buttons optional" readonly="readonly" type="radio" value="false" name="vehicle[diesel]" id="vehicle_diesel_false">
-                <label class="collection_radio_buttons" for="vehicle_diesel_false">No</label>
-              </div>
-            </div>
-          </fieldset>
+          <%= f.input :diesel, as: :select, label: false, prompt:'diesel' %>
         </div>
         <div class="new-storage-form-section">
           <%= f.input :property_insurance, label: false, placeholder:'proerty insurance' %>
