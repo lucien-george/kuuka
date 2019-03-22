@@ -1,22 +1,68 @@
 <div class="vehicle-wrapper">
   <div class="container">
+    <h1>Become a Driver</h1>
     <div class="new-vehicle-form">
-      <h1>Become a Driver</h1>
       <%= simple_form_for @vehicle do |f| %>
-        <%= f.input :make %>
-        <%= f.input :year %>
-        <%= f.input :owner, as: :radio_buttons %>
-        <%= f.input :color %>
-        <%= f.input :inspection_card %>
-        <%= f.input :diesel, as: :radio_buttons %>
-        <%= f.input :property_insurance %>
-        <%= f.input :insurance %>
-        <%= f.simple_fields_for :photos do |p| %>
-          <%= p.input :url, as: :file, input_html: { multiple: true }, name:"photos[url][]" %>
-          <%= p.input :url_cache, as: :hidden %>
+        <p class="secondary-tag-line">Tell us about your vehicle:</p>
+        <div class="new-storage-form-section">
+          <%= f.input :make, label: false, placeholder:'make' %>
+          <%= f.input :year, label: false, placeholder:'year' %>
+        </div>
+        <div class="new-storage-form-section">
+          <fieldset class="form-group radio_buttons optional vehicle_owner">
+            <div class="unit-div">
+              <legend class="col-form-label pt-0">Owner</legend>
+              <input type="hidden" name="vehicle[owner]" value="">
+              <div class="form-check">
+                <input class="form-check-input radio_buttons optional" type="radio" value="true" name="vehicle[owner]" id="vehicle_owner_true">
+                <label class="collection_radio_buttons" for="vehicle_owner_true">Yes</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input radio_buttons optional" readonly="readonly" type="radio" value="false" name="vehicle[owner]" id="vehicle_owner_false">
+                <label class="collection_radio_buttons" for="vehicle_owner_false">No</label>
+              </div>
+            </div>
+          </fieldset>
+          <%= f.input :color, label: false, placeholder:'color' %>
+        </div>
+        <div class="new-storage-form-section">
+          <%= f.input :inspection_card, label: false, placeholder:'inspection card' %>
+          <fieldset class="form-group radio_buttons optional vehicle_diesel">
+            <div class="unit-div">
+              <legend class="col-form-label pt-0">Diesel</legend>
+              <input type="hidden" name="vehicle[diesel]" value="">
+              <div class="form-check">
+                <input class="form-check-input radio_buttons optional" type="radio" value="true" name="vehicle[diesel]" id="vehicle_diesel_true">
+                <label class="collection_radio_buttons" for="vehicle_diesel_true">Yes</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input radio_buttons optional" readonly="readonly" type="radio" value="false" name="vehicle[diesel]" id="vehicle_diesel_false">
+                <label class="collection_radio_buttons" for="vehicle_diesel_false">No</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="new-storage-form-section">
+          <%= f.input :property_insurance, label: false, placeholder:'proerty insurance' %>
+          <%= f.input :insurance, label: false, placeholder:'insurance' %>
+        </div>
+        <div id="photo-preview-container">
+          <%= f.simple_fields_for :photos do |p| %>
+            <%= p.input :url, as: :file, input_html: { multiple: true, class: 'd-none', id:'photo-input' }, label_html: { class: 'upload-photo upload-photo-vehicle'}, label: "<p>Upload Photograph</p> #{image_tag('upload_image_vehicle.png')}".html_safe, name:"photos[url][]", placeholder:'size', required: false %>
+            <%= p.input :url_cache, as: :hidden %>
+          <% end %>
+          <div class="photo-previews"></div>
+        </div>
+        <p class="secondary-tag-line">Tell us about you:</p>
+        <%= f.button :button, type: :submit, class: 'no-padding' do %>
+          <div class="submit-new-storage-btn submit-new-vehicle-btn">
+            <p>Send my details</p><i class="fas fa-caret-right"></i>
+          </div>
         <% end %>
-        <%= f.submit %>
       <% end %>
     </div>
   </div>
 </div>
+<%= content_for(:after_js) do %>
+  <%= javascript_pack_tag 'components/photo_upload_preview' %>
+<% end %>
