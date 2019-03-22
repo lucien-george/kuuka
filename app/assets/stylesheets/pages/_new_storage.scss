@@ -37,6 +37,7 @@
 .main-title {
   flex-grow: 1;
   text-align: center;
+  padding-top: 85px;
   color: $white;
   font-family: $headers-font;
 
@@ -232,6 +233,7 @@
   }
 
   .main-title {
+    padding: 0;
     h1 {
       font-size: 30px;
     }
