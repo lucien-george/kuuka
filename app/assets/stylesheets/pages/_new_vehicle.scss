@@ -40,3 +40,10 @@
     color:#2999DD;
   }
 }
+ @include for-landscape-phone {
+  .vehicle-wrapper {
+    h1 {
+      font-size: 40px;
+    }
+  }
+ }
