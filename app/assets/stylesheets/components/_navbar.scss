@@ -2,8 +2,10 @@
   justify-content: space-between;
   background: white;
   border-bottom: 0.5px solid rgba(0,0,0,0.1);
-  padding: 0 0 0 15px;
-  height: 55px;
+  padding: 0 15px;
+  @media only screen and (max-width: 576px) {
+    height: 55px;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -19,7 +21,24 @@
   width: 150px;
   display: flex;
   justify-content: center;
-
+  @media only screen and (max-width: 1200px) {
+    width: 140px;
+  }
+  @media only screen and (max-width: 992px) {
+    width: 120px;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 100px;
+  }
+  @media only screen and (max-width: 576px) {
+    width: 120px;
+    background: white;
+    padding: 6px 0 !important;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #DADADA;
+    box-shadow: 0 1px 5px #A8A8A8;
+  }
 }
 
 .nav-link-border-right {
@@ -33,6 +52,30 @@
 .navbar-toggler {
   border-radius: 5px;
   font-size: 14px;
+  font-weight: lighter;
   color: white !important;
   background: #3C56F1;
+  display: flex;
+  align-items: center;
+  width: 120px;
+  justify-content: space-between;
+  height: 32px;
+}
+
+.navbar-nav {
+  @media only screen and (max-width: 576px) {
+    align-items: flex-end;
+  }
+}
+
+.navbar-collapse {
+  background: transparent;
+  @media only screen and (max-width: 576px) {
+    position: absolute;
+    top: 44px;
+    right: 15px;
+    a {
+      color: #828282;
+    }
+  }
 }
