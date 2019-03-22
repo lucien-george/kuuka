@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   resources :vehicles
   resources :storages
   get "/how_it_works", to: 'pages#how_it_works'
+  get "/contact", to: 'pages#contact'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
