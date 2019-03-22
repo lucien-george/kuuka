@@ -62,6 +62,7 @@
 .storage-type {
   width: 181px;
   height: 181px;
+  margin: 10px;
   @include flex-column;
   flex-grow: 0;
   flex-shrink: 0;
