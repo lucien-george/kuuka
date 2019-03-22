@@ -1,0 +1,30 @@
+<div class="index-storage-banner">
+  <%= image_tag 'storage-clock.png', class: "index-storage-banner-image" %>
+  <div class="index-storage-banner-container">
+    <div class="index-storage-banner-title">
+      <h1>Not long now until launch! Let us know if you’re interested.</h1>
+    </div>
+    <div class="index-storage-banner-subtitle">
+      <p>In a quiet room somewhere programmers are busy typing...</p>
+    </div>
+    <div class="index-storage-banner-buttons">
+      <%= link_to storages_path, class: "index-storage-banner-button-link" do %>
+        <div class="index-storage-banner-button" style="background-color: #3C56F1; box-shadow: 0 5px 11px rgba(60,86,241,0.3);">
+          <p>Send Love</p>
+          <div>
+            <%= image_tag 'send-love-heart.png', height: 30, width: 30 %>
+          </div>
+        </div>
+      <% end %>
+      <%= link_to vehicles_path, class: "index-storage-banner-button-link" do %>
+        <div class="index-storage-banner-button" style="background-color: #00BDC7; box-shadow: 0 5px 11px rgba(0,189,199,0.3);">
+          <p>Contact Us</p>
+          <div>
+            <%= image_tag 'contact-us-play.png', height: 27, width: 27 %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

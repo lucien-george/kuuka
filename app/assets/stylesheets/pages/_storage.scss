@@ -1,0 +1,106 @@
+
+.index-storage-banner {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+  @media only screen and (max-width: 768px) {
+    height: 100vh;
+    padding: 0 2%;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.index-storage-banner-container {
+  margin-left: 20px;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  @media only screen and (max-width: 768px) {
+    width: 90%;
+    height: auto;
+    margin: 0;
+  }
+}
+
+.index-storage-banner-image {
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 50px;
+  }
+}
+
+.index-storage-banner-button {
+  height: 45px;
+  width: 240px;
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 40px;
+  border-radius: 30px;
+  @media only screen and (max-width: 1200px) {
+    width: 210px;
+    padding: 0 30px;
+  }
+  p {
+    color: white;
+    margin: 0;
+  }
+}
+
+.index-storage-banner-button-link:hover {
+  text-decoration: none;
+}
+
+.index-storage-banner-buttons {
+  display: flex;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.index-storage-banner-title h1 {
+  color: #656565;
+  text-align: left;
+  font-weight: bold;
+  font-size: 40px;
+  @media only screen and (max-width: 1270px) {
+    font-size: 35px;
+  }
+  @media only screen and (max-width: 1120px) {
+    font-size: 30px;
+  }
+  @media only screen and (max-width: 992px) {
+    font-size: 25px;
+  }
+  @media only screen and (max-width: 768px) {
+    font-size: 20px;
+    text-align: center;
+
+  }
+}
+
+.index-storage-banner-subtitle {
+  width: 70%;
+  p {
+    text-align: left;
+    font-weight: lighter;
+    font-size: 23px;
+    @media only screen and (max-width: 1120px) {
+      font-size: 20px;
+    }
+    @media only screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+    @media only screen and (max-width: 768px) {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
+}

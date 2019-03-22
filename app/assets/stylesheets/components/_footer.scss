@@ -28,6 +28,9 @@
 .footer-kuuka-branding {
   display: flex;
   align-items: center;
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+  }
   h1 {
     font-weight: bold;
     color: #8B8B8B;
@@ -44,6 +47,9 @@
   display: flex;
   justify-content: space-between;
   padding: 0 5%;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .kuuka-terms {
@@ -56,7 +62,8 @@
     color: #ADADAD;
   }
   @media only screen and (max-width: 768px) {
-    justify-content: space-between;
+    justify-content: center;
+    margin-bottom: 5px;
     align-items: center;
     padding: 0 3%;
     p {
