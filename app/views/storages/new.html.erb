@@ -6,9 +6,9 @@
         <%= image_tag('triangles.png') %>
         <p class="tag-line">Make money from your garage</p>
       </div>
-      <p class="secondary-tag-line">Tell us about your property:</p>
     </div>
     <%= simple_form_for @storage do |f| %>
+      <p class="form-label">Tell us about your property:</p>
       <fieldset class="form-group radio_buttons required storage_storage_type">
         <input type="hidden" name="storage[storage_type]" value="">
         <div class="storage-types">

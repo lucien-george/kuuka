@@ -19,7 +19,8 @@
 
 .main-screen {
   width: 100%;
-  height: calc(100vh - 82px);
+  // height: calc(100vh - 82px);
+  margin-bottom: 200px;
   padding: 125px 0 20px 0;
   @include flex-column;
   justify-content: space-around;
