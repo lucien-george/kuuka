@@ -244,6 +244,34 @@
 }
 
 @include for-landscape-phone {
+  .new-storage-form-section {
+    @include flex-column;
+    .form-group {
+      width: 100%;
+      margin: 5px 0;
+      padding: 0;
+    }
+    .form-group.storage_insurance_type {
+      padding-right: 0;
+    }
+  }
+
+  .user-information {
+    .form-group {
+      @include flex-column;
+      input {
+        margin: 5px 0 !important;
+      }
+    }
+  }
+
+  .storage_photos_url {
+    @include flex-row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
   .main-title {
 
     h1 {
