@@ -1,6 +1,6 @@
 class StoragesController < ApplicationController
   before_action :find_storage, only: %i[show update edit destroy]
-  skip_before_action :authenticate_user!, only: %i[index show]
+  skip_before_action :authenticate_user!, only: %i[index show new create]
   def index
     @storages = Storage.all
   end
@@ -16,7 +16,6 @@ class StoragesController < ApplicationController
   def create
     @storage = Storage.new(storage_params)
     @user = User.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], password: '123456')
-    @user.password = '123456'
     @storage_types = ['Spare Room', 'Garage', 'Locked Space', 'Parking', 'House Space']
     @storage.user = @user
     if @storage.save

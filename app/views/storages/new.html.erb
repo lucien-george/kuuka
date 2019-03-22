@@ -7,7 +7,7 @@
         <%= image_tag('triangles.png') %>
         <p class="tag-line">Make money from your garage</p>
       </div>
-      <p class="secondary-tag-line">Tess us about your property:</p>
+      <p class="secondary-tag-line">Tell us about your property:</p>
     </div>
     <%= simple_form_for @storage do |f| %>
       <fieldset class="form-group radio_buttons required storage_storage_type">
@@ -59,7 +59,7 @@
       </div>
       <div id="photo-preview-container">
         <%= f.simple_fields_for :photos do |p| %>
-          <%= p.input :url, as: :file, input_html: { multiple: true, class: 'd-none', id:'photo-input' }, label_html: { class: 'upload-photo'}, label: "<p>Upload a photograph</p> #{image_tag('upload_image.png')}".html_safe, name:"photos[url][]", placeholder:'size', required: false %>
+          <%= p.input :url, as: :file, input_html: { multiple: true, class: 'd-none', id:'photo-input' }, label_html: { class: 'upload-photo'}, label: "<p>Upload Photograph</p> #{image_tag('upload_image.png')}".html_safe, name:"photos[url][]", placeholder:'size', required: false %>
           <%= p.input :url_cache, as: :hidden %>
         <% end %>
         <div class="photo-previews"></div>
