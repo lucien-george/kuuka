@@ -49,8 +49,10 @@
     background: asset-url('new_vehicle_background_mobile.png');
     background-repeat: no-repeat;
     background-size: cover;
+    height: calc(100vh - 67.5px);
     h1 {
       font-size: 40px;
+      text-align: center;
     }
   }
 
@@ -58,7 +60,9 @@
     background: none;
     border: none;
     box-shadow: none;
+    padding: 66px 0;
     text-align: center;
+    margin: 0;
     .secondary-tag-line {
       text-align: center;
     }
