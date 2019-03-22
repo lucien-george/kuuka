@@ -1,6 +1,7 @@
 .storage-wrapper {
   width: 100vw;
   min-height: calc(100vh - 82px);
+  padding-bottom: 163px;
 }
 
 .list-your-space-background {
@@ -124,6 +125,13 @@
   .form-check {
     margin: 0 10px;
   }
+  p {
+    margin: 0;
+  }
+}
+
+.space-between {
+  justify-content: space-between;
 }
 
 .form-label {
@@ -135,8 +143,39 @@
 
 .new-storage-form-section {
   @include flex-row;
-  justify-content: flex-start;
   align-items: center;
+  .form-group {
+    flex: 0 0 25%;
+    padding: 0 15px;
+  }
+  .form-group:first-child {
+    padding-left: 0;
+  }
+  .form-group:last-child {
+    padding-right: 0;
+  }
+  .form-group.storage_insurance_type {
+    padding-right: 15px;
+  }
+}
+
+.photo-previews {
+  @include flex-row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.photo-preview {
+  width: 150px;
+  object-fit: contain;
+  margin: 10px;
+}
+
+.photo-preview:first-child {
+  width: 150px;
+  object-fit: contain;
+  margin-left: 0px;
 }
 
 .active {
