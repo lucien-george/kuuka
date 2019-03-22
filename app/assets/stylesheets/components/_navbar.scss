@@ -59,7 +59,7 @@
   align-items: center;
   width: 120px;
   justify-content: space-between;
-  height: 32px;
+  height: 35px;
 }
 
 .navbar-nav {
@@ -70,10 +70,11 @@
 
 .navbar-collapse {
   background: transparent;
+  padding: 0 5px;
   @media only screen and (max-width: 576px) {
     position: absolute;
-    top: 44px;
-    right: 15px;
+    top: 47px;
+    right: 10px;
     z-index: 10000;
     a {
       color: #828282;
