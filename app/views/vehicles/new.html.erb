@@ -54,6 +54,17 @@
           <div class="photo-previews"></div>
         </div>
         <p class="secondary-tag-line">Tell us about you:</p>
+        <div class="user-information">
+          <div class="form-group">
+            <input type="text" name="first_name", placeholder="first name" class="form-control" id="fname">
+            <input type="text" name="last_name", placeholder="last name" class="form-control" id="lname">
+          </div>
+          <div class="form-group">
+            <input type="text" name="email", placeholder="email" class="form-control" id="email">
+            <input type="text" name="email_confirmation", placeholder="email confirmation" class="form-control" id="email_confirmation">
+          </div>
+          <p id="email-error-message" class="d-none">Emails don't match</p>
+        </div>
         <%= f.button :button, type: :submit, class: 'no-padding' do %>
           <div class="submit-new-storage-btn submit-new-vehicle-btn">
             <p>Send my details</p><i class="fas fa-caret-right"></i>
@@ -65,4 +76,5 @@
 </div>
 <%= content_for(:after_js) do %>
   <%= javascript_pack_tag 'components/photo_upload_preview' %>
+  <%= javascript_pack_tag 'components/email_confirmation' %>
 <% end %>

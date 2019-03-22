@@ -15,7 +15,8 @@ class VehiclesController < ApplicationController
 
   def create
     @vehicle = Vehicle.new(vehicle_params)
-    @vehicle.user = current_user
+    @user = User.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], password: '123456')
+    @vehicle.user = @user
     if @vehicle.save
       params[:vehicle][:photos][:url]&.each do |url|
         @vehicle.photos.create(url: url)

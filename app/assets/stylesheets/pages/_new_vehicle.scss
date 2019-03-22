@@ -14,6 +14,10 @@
   }
 }
 
+.form-control {
+  padding: 1.375rem 0.75rem;
+}
+
 .new-vehicle-form {
   background: white;
     padding: 94px 64px;
@@ -45,5 +49,12 @@
     h1 {
       font-size: 40px;
     }
+  }
+
+  .vehicle_photos_url {
+    @include flex-row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
   }
  }
