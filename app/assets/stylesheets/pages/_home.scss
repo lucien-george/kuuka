@@ -300,24 +300,27 @@
     align-items: center;
   }
   p {
-    color: #363431;
-    margin: 0;
+    color: white;
+    margin: 10px 0;
+    font-weight: lighter;
+    font-size: 14px;
   }
 }
 
 .cover-options-image {
   width: 100%;
+  border-radius: 5px 5px 0 0;
 }
 
 .cover-option-container {
-  height: 300px;
   width: 200px;
-  background: #F4F2F5;
-  padding: 15px;
+  background: #00cdd7;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  overflow: hidden;
   @media only screen and (max-width: 768px) {
     margin-bottom: 50px;
   }

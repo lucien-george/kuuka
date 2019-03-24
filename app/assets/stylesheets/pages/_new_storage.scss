@@ -7,6 +7,11 @@
   background-size: contain;
   background-position: center top;
   background-repeat: no-repeat;
+  @media only screen and (max-width: 576px) {
+    background: asset-url('new_storage_background_mobile.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
 
 .list-your-space-background {
@@ -25,6 +30,9 @@
   @include flex-column;
   justify-content: space-around;
   align-items: center;
+  @media only screen and (max-width: 576px) {
+    margin-bottom: 100px;
+  }
 }
 
 .secondary-tag-line {
@@ -229,10 +237,6 @@
 }
 
 @include for-tablet {
-  .main-screen {
-    padding-top: 75px;
-  }
-
   .main-title {
     padding: 0;
     h1 {
