@@ -49,15 +49,33 @@
   padding-top: 85px;
   color: $white;
   font-family: $headers-font;
-
   h1 {
     font-weight: bold;
-    font-size: 80px;
+    margin-left: 5px;
+    font-size: 45px;
+    @media only screen and (max-width: 1120px) {
+      font-size: 40px;
+    }
+    @media only screen and (max-width: 992px) {
+      font-size: 35px;
+    }
+    @media only screen and (max-width: 768px) {
+      font-size: 25px;
+    }
   }
 }
 
 .tag-line {
-  font-size: 30px;
+  font-size: 25px;
+  @media only screen and (max-width: 1120px) {
+    font-size: 20px;
+  }
+  @media only screen and (max-width: 992px) {
+    font-size: 15px;
+  }
+  @media only screen and (max-width: 768px) {
+    font-size: 13px;
+  }
 }
 
 .storage-types {
@@ -119,6 +137,8 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   }
 }
+
+
 
 .submit-new-storage-btn {
   @include flex-row;
@@ -220,12 +240,6 @@
     padding-top: 100px;
   }
 
-  .main-title {
-    h1 {
-      font-size: 50px;
-    }
-  }
-
   .tag-line, .secondary-tag-line {
     font-size: 20px;
   }
@@ -239,12 +253,8 @@
 @include for-tablet {
   .main-title {
     padding: 0;
-    h1 {
-      font-size: 30px;
-    }
-
     img {
-      width: 40%;
+      width: 60%;
     }
   }
 
@@ -283,11 +293,6 @@
   }
 
   .main-title {
-
-    h1 {
-      font-size: 30px;
-    }
-
     img {
       width: 50%;
       margin-top: 5px;
@@ -300,5 +305,17 @@
 
   .list-your-space-background {
     top: 5%;
+  }
+}
+
+.new_storage {
+  .form-group {
+    margin-bottom: 30px;
+  }
+  .upload-photo:hover {
+    p {
+      background: #15949D;
+      color: white;
+    }
   }
 }
