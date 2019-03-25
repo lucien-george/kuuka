@@ -25,13 +25,19 @@
 .main-screen {
   width: 100%;
   // height: calc(100vh - 82px);
-  margin-bottom: 200px;
+  margin-bottom: 350px;
   padding: 125px 0 20px 0;
   @include flex-column;
   justify-content: space-around;
   align-items: center;
-  @media only screen and (max-width: 576px) {
-    margin-bottom: 100px;
+  @media only screen and (max-width: 1500px) {
+    margin-bottom: 200px;
+  }
+  @media only screen and (max-width: 1200px) {
+    margin-bottom: 150px;
+  }
+  @media only screen and (max-width: 400px) {
+    margin-bottom: 50px;
   }
 }
 
@@ -313,8 +319,8 @@
     margin-bottom: 30px;
   }
   .upload-photo:hover {
+    background: #15949D;
     p {
-      background: #15949D;
       color: white;
     }
   }
