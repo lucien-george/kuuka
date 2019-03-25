@@ -144,7 +144,6 @@
     color: white;
   }
   a:hover {
-    color: #3BB7BF;
     text-decoration: none;
   }
   a:visited {
@@ -170,12 +169,10 @@
   }
   &:hover {
     box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    text-shadow: 0 0 3px;
   }
 }
 
 .link_circle {
     color: white;
-  &:hover {
-    color: #c3c3c3;
-  }
 }
