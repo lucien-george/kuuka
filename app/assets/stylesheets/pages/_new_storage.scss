@@ -26,12 +26,14 @@
   width: 100%;
   // height: calc(100vh - 82px);
   margin-bottom: 350px;
-  padding: 125px 0 20px 0;
+  padding: 270px 0 20px 0;
   @include flex-column;
   justify-content: space-around;
   align-items: center;
   @media only screen and (max-width: 1500px) {
     margin-bottom: 200px;
+    padding: 180px 0 20px 0;
+
   }
   @media only screen and (max-width: 1200px) {
     margin-bottom: 150px;

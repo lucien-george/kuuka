@@ -1,7 +1,7 @@
 .how-it-works-banner {
   background-image: asset_url('how-kuuka.png');
   background-size: cover;
-  height: 60vh;
+  height: 68vh;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -9,7 +9,7 @@
   text-align: center;
   color: white;
   @media only screen and (max-width: 1200px) {
-    height: 40vh;
+    height: 45vh;
   }
   @media only screen and (max-width: 992px) {
     height: 35vh;
@@ -18,7 +18,7 @@
     height: 28vh;
   }
   @media only screen and (max-width: 576px) {
-    height: 58vh;
+    height: 65vh;
     background-image: asset_url('how-kuuka-mobile.png');
   }
   h1 {
