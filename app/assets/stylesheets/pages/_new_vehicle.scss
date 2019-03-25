@@ -30,7 +30,11 @@
     text-align: left;
   }
   select {
-    height: 47px;
+    height: calc(1.5em + 0.75rem + 2px);
+  }
+
+  .form-group {
+    margin-bottom: 30px;
   }
 }
 

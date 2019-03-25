@@ -161,14 +161,14 @@
 }
 
 .move-belongings-banner {
-  height: 70vh;
+  height: 90vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 15%;
   @media only screen and (max-width: 768px) {
     text-align: center;
-    height: 100vh;
+    height: auto;
     flex-direction: column;
     justify-content: center;
   }
@@ -201,14 +201,14 @@
 }
 
 .storage-banner {
-  height: 70vh;
+  height: 90vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 12%;
   @media only screen and (max-width: 768px) {
     text-align: center;
-    height: 100vh;
+    height: auto;
     flex-direction: column-reverse;
     justify-content: center;
   }
@@ -253,7 +253,7 @@
 }
 
 .covered-banner {
-  height: 80vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
