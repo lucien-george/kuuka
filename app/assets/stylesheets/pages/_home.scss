@@ -95,7 +95,7 @@
     @media only screen and (max-width: 1120px) {
       font-size: 18px;
     }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 992px) {
       font-size: 16px;
     }
     @media only screen and (max-width: 768px) {
@@ -258,6 +258,46 @@
   @media only screen and (max-width: 768px) {
     width: 100%;
   }
+}
+
+.storage-banner-choices {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  @media only screen and (max-width: 992px) {
+    display: none;
+  }
+}
+
+.storage-banner-each-choice {
+  background: #45D1D9;
+  width: 32%;
+  border-radius: 20px;
+  padding: 7px 10px 7px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media only screen and (max-width: 1200px) {
+    padding: 7px 10px 7px 10px;
+  }
+}
+
+.sbcp {
+  margin: 0;
+  font-size: 14px;
+  color: white;
+  font-weight: 600;
+  @media only screen and (max-width: 1200px) {
+    font-size: 12px !important;
+    font-weight: normal;
+  }
+}
+
+.storage-choice-circle {
+  background: #3BB7BD;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
 }
 
 .covered-banner {

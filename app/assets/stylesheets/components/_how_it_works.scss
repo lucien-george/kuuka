@@ -56,10 +56,16 @@
   height: 60px;
   width: 200px;
   border-radius: 3px;
-  color: #DADADA;
+  color: #8c8c8c;
   cursor: pointer;
   p {
     margin: 0;
+  }
+  @media only screen and (max-width: 768px) {
+    p {
+      font-size: 14px;
+      color: #8c8c8c;
+    }
   }
 }
 
