@@ -9,8 +9,17 @@
     margin-top: 95px;
     font-family: $headers-font;
     font-weight: bold;
-    font-size: 80px;
     color: #FFFFFF;
+    font-size: 55px;
+    @media only screen and (max-width: 1200px) {
+      font-size: 45px;
+    }
+    @media only screen and (max-width: 992px) {
+      font-size: 35px;
+    }
+    @media only screen and (max-width: 768px) {
+      font-size: 25px;
+    }
   }
 }
 
@@ -58,7 +67,6 @@
     background-size: cover;
     height: calc(100vh - 67.5px);
     h1 {
-      font-size: 40px;
       text-align: center;
     }
   }
