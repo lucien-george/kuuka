@@ -1,5 +1,6 @@
 class Vehicle < ApplicationRecord
   belongs_to :user
+  accepts_nested_attributes_for :user
   has_many :photos, dependent: :destroy
   validates :make, presence: true
   validates :year, presence: true, numericality: { only_integer: true }
