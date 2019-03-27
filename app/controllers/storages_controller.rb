@@ -15,10 +15,15 @@ class StoragesController < ApplicationController
   end
 
   def create
-    @storage = Storage.new(storage_params)
-    @user = User.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], password: '123456')
     @storage_types = ['Spare Room', 'Garage', 'Locked Space', 'Parking', 'House Space']
-    @storage.user = @user
+    @storage = Storage.new(storage_params)
+    @user = User.find_by(email: params[:storage][:user][:email])
+    if @user
+      @storage.user = @user
+    else
+      @user = User.create(first_name: params[:storage][:user][:first_name], last_name: params[:storage][:user][:last_name], email: params[:storage][:user][:email], password: '123456')
+      @storage.user = @user
+    end
     if @storage.save
       params[:storage][:photos][:url]&.each do |url|
         @storage.photos.create(url: url)
