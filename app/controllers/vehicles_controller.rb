@@ -17,12 +17,10 @@ class VehiclesController < ApplicationController
   def create
     @vehicle = Vehicle.new(vehicle_params)
     @user = User.find_by(email: params[:vehicle][:user][:email])
-    if @user
-      @vehicle.user = @user
-    else
+    unless @user
       @user = User.create(first_name: params[:vehicle][:user][:first_name], last_name: params[:vehicle][:user][:last_name], email: params[:vehicle][:user][:email], password: '123456')
-      @vehicle.user = @user
     end
+    @vehicle.user = @user
     if @vehicle.save
       params[:vehicle][:photos][:url]&.each do |url|
         @vehicle.photos.create(url: url)
