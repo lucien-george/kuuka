@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'contact@hoxton-digital.com'
+  default from: 'contact@kuuka.co.uk'
   layout 'mailer'
 end
