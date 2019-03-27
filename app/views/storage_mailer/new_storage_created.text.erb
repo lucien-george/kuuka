@@ -1,3 +1,24 @@
-Storage#new_storage_created
+Congratulations, you just listed your storage with us!
 
-<%= @greeting %>, find me in app/views/storage_mailer/new_storage_created.text.erb
+Here are the details of your storage
+
+Storage Type: <%= @storage.storage_type %>
+
+Dimensions:
+Height: <%= @storage.height %> <%= @storage.unit %>
+Width: <%= @storage.width %> <%= @storage.unit %>
+Depth: <%= @storage.depth %> <%= @storage.unit %>
+Weight Capacity: <%= @storage.weight_capacity %> kg
+
+Price:
+Price per day: £<%= number_with_delimiter(@storage.price_per_day, delimiter: ',') %>
+Price per week: £<%= number_with_delimiter(@storage.price_per_week, delimiter: ',') %>
+Price per month: £<%= number_with_delimiter(@storage.price_per_month, delimiter: ',') %>
+Price per 6 months: £<%= number_with_delimiter(@storage.price_per_six_month, delimiter: ',') %>
+
+Location: <%= @storage.location %>
+
+Insurance: <%= @storage.insurance ? 'yes' : 'no' %>
+<% if @storage.insurance %>
+Insurance Type: <%= @storage.insurance_type %>
+<% end %>

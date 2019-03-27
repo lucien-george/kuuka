@@ -1,5 +1,22 @@
-<h1>Storage#new_storage_created</h1>
-
-<p>
-  <%= @greeting %>, find me in app/views/storage_mailer/new_storage_created.html.erb
-</p>
+<h2>Congratulations, you just listed your storage with us!</h2>
+<h3>Here are the details of your storage</h3>
+<h4>Storage Type: <%= @storage.storage_type %></h4>
+<h4>Dimensions:</h4>
+<ul>
+  <li><p>Height: <%= @storage.height %> <%= @storage.unit %></p></li>
+  <li><p>Width: <%= @storage.width %> <%= @storage.unit %></p></li>
+  <li><p>Depth: <%= @storage.depth %> <%= @storage.unit %></p></li>
+  <li><p>Weight Capacity: <%= @storage.weight_capacity %> kg</p></li>
+</ul>
+<h4>Price:</h4>
+<ul>
+  <li><p>Price per day: £<%= number_with_delimiter(@storage.price_per_day, delimiter: ',') %></p></li>
+  <li><p>Price per week: £<%= number_with_delimiter(@storage.price_per_week, delimiter: ',') %></p></li>
+  <li><p>Price per month: £<%= number_with_delimiter(@storage.price_per_month, delimiter: ',') %></p></li>
+  <li><p>Price per 6 months: £<%= number_with_delimiter(@storage.price_per_six_month, delimiter: ',') %></p></li>
+</ul>
+<h4>Location: <%= @storage.location %></h4>
+<h4>Insurance: <%= @storage.insurance ? 'yes' : 'no' %></h4>
+<% if @storage.insurance %>
+  <h4>Insurance Type: <%= @storage.insurance_type %></h4>
+<% end %>

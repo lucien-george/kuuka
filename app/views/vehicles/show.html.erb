@@ -8,15 +8,15 @@
       <p>In a quiet room somewhere programmers are busy typing...</p>
     </div>
     <div class="index-storage-banner-buttons">
-      <%= link_to storages_path, class: "index-storage-banner-button-link" do %>
+      <%= link_to new_vehicle_path, class: "index-storage-banner-button-link" do %>
         <div class="index-storage-banner-button" style="background-color: #3C56F1; box-shadow: 0 5px 11px rgba(60,86,241,0.3);">
-          <p>Send Love</p>
+          <p>Become a Driver</p>
           <div>
-            <%= image_tag 'send-love-heart.png', height: 30, width: 30 %>
+            <%= image_tag 'become-driver-button.png', width: 30 %>
           </div>
         </div>
       <% end %>
-      <%= link_to vehicles_path, class: "index-storage-banner-button-link" do %>
+      <%= link_to contact_path, class: "index-storage-banner-button-link" do %>
         <div class="index-storage-banner-button" style="background-color: #00BDC7; box-shadow: 0 5px 11px rgba(0,189,199,0.3);">
           <p>Contact Us</p>
           <div>
@@ -27,4 +27,3 @@
     </div>
   </div>
 </div>
-
