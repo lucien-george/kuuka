@@ -8,5 +8,6 @@ class StorageMailer < ApplicationMailer
   def new_storage_created(storage, user)
     @storage = storage
     @user = user
+    mail(to: @user.email, subject: 'Your Storage was Successfully Created!')
   end
 end
