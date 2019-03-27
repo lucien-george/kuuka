@@ -14,4 +14,11 @@ class Storage < ApplicationRecord
   validates :storage_type, presence: true
   validates :insurance, inclusion: { in: [true, false] }
   validates :insurance_type, presence: true
+  after_create :send_email_after_create
+
+  private
+
+  def send_email_after_create
+    StorageMailer.new_storage_created(self, user).deliver_now
+  end
 end

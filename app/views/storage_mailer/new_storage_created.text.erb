@@ -5,10 +5,10 @@ Here are the details of your storage
 Storage Type: <%= @storage.storage_type %>
 
 Dimensions:
-Height: <%= @storage.height %> <%= @storage.unit %>
-Width: <%= @storage.width %> <%= @storage.unit %>
-Depth: <%= @storage.depth %> <%= @storage.unit %>
-Weight Capacity: <%= @storage.weight_capacity %> kg
+Height: <%= number_with_delimiter(@storage.height, delimiter: ',') %> <%= @storage.unit %>
+Width: <%= number_with_delimiter(@storage.width, delimiter: ',') %> <%= @storage.unit %>
+Depth: <%= number_with_delimiter(@storage.depth, delimiter: ',') %> <%= @storage.unit %>
+Weight Capacity: <%= number_with_delimiter(@storage.weight_capacity, delimiter: ',') %> kg
 
 Price:
 Price per day: £<%= number_with_delimiter(@storage.price_per_day, delimiter: ',') %>

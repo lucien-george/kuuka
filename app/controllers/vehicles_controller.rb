@@ -1,7 +1,6 @@
 class VehiclesController < ApplicationController
   before_action :find_vehicle, only: %i[show update edit destroy]
   skip_before_action :authenticate_user!, only: %i[index show new create]
-  after_create :send_email_after_create
 
   def index
     @vehicles = Vehicle.all
@@ -53,9 +52,5 @@ class VehiclesController < ApplicationController
 
   def vehicle_params
     params.require(:vehicle).permit(:make, :year, :owner, :color, :inspection_card, :diesel, :property_insurance, :insurance)
-  end
-
-  def send_email_after_create
-    VehicleMailer.new_vehicle_created(self, user).deliver_now
   end
 end
