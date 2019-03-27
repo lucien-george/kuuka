@@ -55,8 +55,8 @@
       </div>
       <p class="form-label">Insurance:</p>
       <div class="new-storage-form-section">
-        <%= f.input :insurance, label: false, placeholder:'insurance', input_html: { class: 'new-storage-input'} %>
-        <%= f.input :insurance_type, label: false, placeholder:'insurance type', input_html: { class: 'new-storage-input'} %>
+        <%= f.input :insurance, as: :select, label: false, prompt:'insurance' %>
+        <%= f.input :insurance_type, label: false, placeholder:'insurance type' %>
       </div>
       <div id="photo-preview-container">
         <%= f.simple_fields_for :photos do |p| %>
