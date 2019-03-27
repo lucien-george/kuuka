@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2019_03_20_174848) do
     t.string "location"
     t.integer "weight_capacity"
     t.string "storage_type"
-    t.string "insurance"
+    t.boolean "insurance"
     t.string "insurance_type"
     t.integer "price_per_day"
     t.index ["user_id"], name: "index_storages_on_user_id"
@@ -71,8 +71,8 @@ ActiveRecord::Schema.define(version: 2019_03_20_174848) do
     t.string "color"
     t.string "inspection_card"
     t.boolean "diesel"
-    t.string "property_insurance"
-    t.string "insurance"
+    t.boolean "property_insurance"
+    t.boolean "insurance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_vehicles_on_user_id"

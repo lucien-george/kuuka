@@ -17,8 +17,8 @@
           <%= f.input :diesel, as: :select, label: false, prompt:'diesel' %>
         </div>
         <div class="new-storage-form-section">
-          <%= f.input :property_insurance, label: false, placeholder:'property insurance' %>
-          <%= f.input :insurance, label: false, placeholder:'insurance' %>
+          <%= f.input :property_insurance, as: :select, label: false, prompt:'property insurance' %>
+          <%= f.input :insurance, as: :select, label: false, prompt:'insurance' %>
         </div>
         <div id="photo-preview-container">
           <%= f.simple_fields_for :photos do |p| %>

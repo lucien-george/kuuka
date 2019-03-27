@@ -8,8 +8,8 @@ class CreateVehicles < ActiveRecord::Migration[5.2]
       t.string :color
       t.string :inspection_card
       t.boolean :diesel
-      t.string :property_insurance
-      t.string :insurance
+      t.boolean :property_insurance
+      t.boolean :insurance
 
       t.timestamps
     end

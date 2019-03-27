@@ -7,6 +7,6 @@ class Vehicle < ApplicationRecord
   validates :color, presence: true
   validates :inspection_card, presence: true
   validates :diesel, inclusion: { in: [true, false] }
-  validates :property_insurance, presence: true
-  validates :insurance, presence: true
+  validates :property_insurance, inclusion: { in: [true, false] }
+  validates :insurance, inclusion: { in: [true, false] }
 end
