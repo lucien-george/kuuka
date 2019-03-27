@@ -5,9 +5,9 @@ class Storage < ApplicationRecord
   validates :height, presence: true, numericality: { only_integer: true }
   validates :width, presence: true, numericality: { only_integer: true }
   validates :depth, presence: true, numericality: { only_integer: true }
-  validates :price_per_day, presence: true, numericality: { only_integer: true }
-  validates :price_per_week, presence: true, numericality: { only_integer: true }
-  validates :price_per_month, presence: true, numericality: { only_integer: true }
+  validates :price_per_day, presence: true, numericality: { only_integer: true, greater_than: 0 }
+  validates :price_per_week, presence: true, numericality: { only_integer: true, greater_than: 0 }
+  validates :price_per_month, presence: true, numericality: { only_integer: true, greater_than: 0 }
   validates :price_per_six_month, presence: true, numericality: { only_integer: true }
   validates :location, presence: true
   validates :weight_capacity, presence: true, numericality: { only_integer: true }
