@@ -1,6 +1,8 @@
 class StoragesController < ApplicationController
   before_action :find_storage, only: %i[show update edit destroy]
   skip_before_action :authenticate_user!, only: %i[index show new create]
+  after_create :send_email_after_create
+
   def index
     @storages = Storage.all
   end
@@ -53,5 +55,9 @@ class StoragesController < ApplicationController
 
   def storage_params
     params.require(:storage).permit(:unit, :height, :width, :depth, :price_per_day, :price_per_week, :price_per_month, :price_per_six_month, :location, :weight_capacity, :storage_type, :insurance, :insurance_type)
+  end
+
+  def send_email_after_create
+    StorageMailer.new_storage_created(self, user).deliver_now
   end
 end
