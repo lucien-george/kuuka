@@ -1,0 +1,24 @@
+Congratulations, you just listed your storage with us!
+
+Here are the details of your storage
+
+Storage Type: <%= @storage.storage_type %>
+
+Dimensions:
+Height: <%= number_with_delimiter(@storage.height, delimiter: ',') %> <%= @storage.unit %>
+Width: <%= number_with_delimiter(@storage.width, delimiter: ',') %> <%= @storage.unit %>
+Depth: <%= number_with_delimiter(@storage.depth, delimiter: ',') %> <%= @storage.unit %>
+Weight Capacity: <%= number_with_delimiter(@storage.weight_capacity, delimiter: ',') %> kg
+
+Price:
+Price per day: £<%= number_with_delimiter(@storage.price_per_day, delimiter: ',') %>
+Price per week: £<%= number_with_delimiter(@storage.price_per_week, delimiter: ',') %>
+Price per month: £<%= number_with_delimiter(@storage.price_per_month, delimiter: ',') %>
+Price per 6 months: £<%= number_with_delimiter(@storage.price_per_six_month, delimiter: ',') %>
+
+Location: <%= @storage.location %>
+
+Insurance: <%= @storage.insurance ? 'yes' : 'no' %>
+<% if @storage.insurance %>
+Insurance Type: <%= @storage.insurance_type %>
+<% end %>

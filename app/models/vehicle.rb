@@ -9,4 +9,11 @@ class Vehicle < ApplicationRecord
   validates :diesel, inclusion: { in: [true, false] }
   validates :property_insurance, inclusion: { in: [true, false] }
   validates :insurance, inclusion: { in: [true, false] }
+  after_create :send_email_after_create
+
+  private
+
+  def send_email_after_create
+    VehicleMailer.new_vehicle_created(self, user).deliver_now
+  end
 end
