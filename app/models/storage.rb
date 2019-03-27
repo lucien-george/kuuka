@@ -12,7 +12,6 @@ class Storage < ApplicationRecord
   validates :location, presence: true
   validates :weight_capacity, presence: true, numericality: { only_integer: true }
   validates :storage_type, presence: true
-  validates :insurance, inclusion: { in: [true, false] }
   validates :insurance_type, presence: true
   after_create :send_email_after_create
 
