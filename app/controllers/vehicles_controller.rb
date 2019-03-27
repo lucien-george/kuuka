@@ -11,16 +11,12 @@ class VehiclesController < ApplicationController
 
   def new
     @vehicle = Vehicle.new
-    @user = User.new
+    @vehicle.build_user
   end
 
   def create
     @vehicle = Vehicle.new(vehicle_params)
-    @user = User.find_by(email: params[:vehicle][:user][:email])
-    unless @user
-      @user = User.create(first_name: params[:vehicle][:user][:first_name], last_name: params[:vehicle][:user][:last_name], email: params[:vehicle][:user][:email], password: '123456')
-    end
-    @vehicle.user = @user
+    @vehicle.user.password = '123456'
     if @vehicle.save
       params[:vehicle][:photos][:url]&.each do |url|
         @vehicle.photos.create(url: url)
@@ -55,6 +51,6 @@ class VehiclesController < ApplicationController
   end
 
   def vehicle_params
-    params.require(:vehicle).permit(:make, :year, :owner, :color, :inspection_card, :diesel, :property_insurance, :insurance)
+    params.require(:vehicle).permit(:make, :year, :owner, :color, :inspection_card, :diesel, :property_insurance, :insurance, user_attributes: [:first_name, :last_name, :email])
   end
 end

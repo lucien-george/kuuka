@@ -1,5 +1,6 @@
 class Storage < ApplicationRecord
   belongs_to :user
+  accepts_nested_attributes_for :user
   has_many :photos, dependent: :destroy
   validates :unit, inclusion: { in: ['m', 'ft'] }
   validates :height, presence: true, numericality: { only_integer: true }

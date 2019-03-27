@@ -11,17 +11,14 @@ class StoragesController < ApplicationController
 
   def new
     @storage = Storage.new
+    @storage.build_user
     @storage_types = ['Spare Room', 'Garage', 'Locked Space', 'Parking', 'House Space']
   end
 
   def create
     @storage_types = ['Spare Room', 'Garage', 'Locked Space', 'Parking', 'House Space']
     @storage = Storage.new(storage_params)
-    @user = User.find_by(email: params[:storage][:user][:email])
-    unless @user
-      @user = User.create(first_name: params[:storage][:user][:first_name], last_name: params[:storage][:user][:last_name], email: params[:storage][:user][:email], password: '123456')
-    end
-    @storage.user = @user
+    @storage.user.password = '123456'
     if @storage.save
       params[:storage][:photos][:url]&.each do |url|
         @storage.photos.create(url: url)
@@ -56,6 +53,6 @@ class StoragesController < ApplicationController
   end
 
   def storage_params
-    params.require(:storage).permit(:unit, :height, :width, :depth, :price_per_day, :price_per_week, :price_per_month, :price_per_six_month, :location, :weight_capacity, :storage_type, :insurance, :insurance_type)
+    params.require(:storage).permit(:unit, :height, :width, :depth, :price_per_day, :price_per_week, :price_per_month, :price_per_six_month, :location, :weight_capacity, :storage_type, :insurance, :insurance_type, user_attributes: [:first_name, :last_name, :email])
   end
 end

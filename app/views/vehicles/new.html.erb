@@ -28,14 +28,13 @@
           <div class="photo-previews"></div>
         </div>
         <p class="secondary-tag-line">Tell us about you:</p>
-        <%= f.simple_fields_for :user do |u| %>
+        <%= f.simple_fields_for :user, @vehicle.user do |u| %>
           <div class="new-storage-form-section">
             <%= u.input :first_name, label: false, placeholder: 'first name' %>
             <%= u.input :last_name, label: false, placeholder: 'last name' %>
           </div>
           <div class="new-storage-form-section">
             <%= u.input :email, label: false, placeholder: 'email' %>
-            <%= u.input :email_confirmation, label: false, placeholder: 'email confirmation' %>
           </div>
         <% end %>
         <%= f.button :button, type: :submit, class: 'no-padding' do %>
