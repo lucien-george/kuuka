@@ -1,3 +1,19 @@
-Vehicle#new_vehicle_created
+Congratulations, you just listed your vehicle with us!
 
-<%= @greeting %>, find me in app/views/vehicle_mailer/new_vehicle_created.text.erb
+Here are the details of your vehicle
+
+Make: <%= @vehicle.make %>
+
+Year: <%= @vehicle.year %>
+
+Owner: <%= @vehicle.owner ? 'yes' : 'no' %>
+
+Color: <%= @vehicle.color %>
+
+Inspection Card: <%= @vehicle.inspection_card %>
+
+Diesel: <%= @vehicle.diesel ? 'yes' : 'no' %>
+
+Property Insurance: <%= @vehicle.property_insurance ? 'yes' : 'no' %>
+
+Insurance: <%= @vehicle.insurance ? 'yes' : 'no' %>

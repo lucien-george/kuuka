@@ -1,5 +1,10 @@
-<h1>Vehicle#new_vehicle_created</h1>
-
-<p>
-  <%= @greeting %>, find me in app/views/vehicle_mailer/new_vehicle_created.html.erb
-</p>
+<h2>Congratulations, you just listed your vehicle with us!</h2>
+<h3>Here are the details of your vehicle</h3>
+<p>Make: <%= @vehicle.make %></p>
+<p>Year: <%= @vehicle.year %></p>
+<p>Owner: <%= @vehicle.owner ? 'yes' : 'no' %></p>
+<p>Color: <%= @vehicle.color %></p>
+<p>Inspection Card: <%= @vehicle.inspection_card %></p>
+<p>Diesel: <%= @vehicle.diesel ? 'yes' : 'no' %></p>
+<p>Property Insurance: <%= @vehicle.property_insurance ? 'yes' : 'no' %></p>
+<p>Insurance: <%= @vehicle.insurance ? 'yes' : 'no' %></p>
