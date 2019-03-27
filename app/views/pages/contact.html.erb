@@ -3,7 +3,7 @@
     <h1>Stay in Touch</h1>
     <div class="contact-form">
       <div class="contact-form-left">
-        <%= simple_form_for '/contact', url: contact_path do |f| %>
+        <%= simple_form_for :send_email, url: send_email_path, method: :get do |f| %>
           <div class="contact-form-name">
             <div class="row">
               <div class="col-sm-6">
