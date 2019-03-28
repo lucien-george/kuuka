@@ -7,6 +7,6 @@ class ContactMailer < ApplicationMailer
   #
   def send_email_to_contact(message)
     @message = message
-    mail(to: 'contact@kuuka.co.uk', from: @message[:email], subject: "Email from #{@message[:first_name].capitalize} #{@message[:last_name].capitalize}")
+    mail(to: 'contact@kuuka.co.uk', from: 'contact@kuuka.co.uk', subject: "Email from #{@message[:email]}: #{@message[:first_name].capitalize} #{@message[:last_name].capitalize}")
   end
 end
